@@ -1,13 +1,13 @@
-package com.EditionLivre;
+package com.DemoGestion;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EditionLivreApplication {
+public class DemoGestionApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EditionLivreApplication.class, args);
+		SpringApplication.run(DemoGestionApplication.class, args);
 	}
 
 }

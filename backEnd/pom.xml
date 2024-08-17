@@ -8,11 +8,11 @@
 		<version>3.3.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.EditionLivre</groupId>
-	<artifactId>EditionLivre</artifactId>
+	<groupId>com.DemoGestion</groupId>
+	<artifactId>DemoGestion</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>EditionLivre</name>
-	<description>Backend du projet EditionLivres</description>
+	<description>Backend du projet DemoGestion</description>
 	<url/>
 	<licenses>
 		<license/>
