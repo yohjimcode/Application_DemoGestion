@@ -5,20 +5,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+import java.util.Date;
+
 @Entity
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class Product {
+@AllArgsConstructor
+public class Payment implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(nullable = false, length = 100)
-    private String title;
-    private double price;
-    @Column(unique = true)
-    private String code;
-
+    private Date date;
+    private String cardType;
+    private String cardNumber;
     @ManyToOne
-    private Category category;
-
+    Order order;
 }
