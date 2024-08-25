@@ -13,7 +13,7 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@DiscriminatorValue("1") //
+@DiscriminatorValue("1") // dans Person (classe extend) , si le person_type est à 1 alors ce sera un provider
 @EqualsAndHashCode(callSuper = false) //
 public class Provider extends Person implements Serializable {
     private String raisonSociale;

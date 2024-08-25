@@ -12,10 +12,10 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@DiscriminatorValue("2") //
+@DiscriminatorValue("2") // dans Person, si le person_type est à 2 alors ce sera un client
 @EqualsAndHashCode(callSuper = false) //
 public class Client extends Person implements Serializable {
     private String code;
     private String birthDay;
-
+    //propriété spécifique au client
 }

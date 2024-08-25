@@ -7,14 +7,26 @@ import com.DemoGestion.entities.Provider;
 import java.util.List;
 
 public interface PersonService {
+
+    //PARTIE Provider
     void createProvider(Provider provider);
+
     List<Provider> findAllProviders(); //avoir la liste des fournisseurs
 
-    void deletePerson(long id);
     void editPerson(Provider provider, long id);
 
-    void createClient(Provider provider);
+
+    //PARTIE CLIENT
+    void createClient(Client client);
+
     List<Client> findAllClients(); //avoir la liste des Clients
-    void deleteClient(long id);
-    void editClient(Provider provider, long id);
+
+    void editPerson(Client client, long id);
+
+
+    //METHODES COMMUNES AUX CLIENTS ET PROVIDERS
+
+    void deletePerson(long id);
+
+
 }
