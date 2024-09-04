@@ -19,6 +19,6 @@ public class OrderItem implements Serializable {
     private long quantity;
     private double price;
     @ManyToOne
-    Order order;
+    private Order order;
 
 }

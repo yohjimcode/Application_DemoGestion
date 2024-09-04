@@ -6,7 +6,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 // pas de Constructor car classe abstraite, classe non instanciable
-// Une personne contient un cleint ou un provider, d'où la classe abstraite
+// Une personne contient un client ou un provider, d'où la classe abstraite
 
 @Entity
 @Data

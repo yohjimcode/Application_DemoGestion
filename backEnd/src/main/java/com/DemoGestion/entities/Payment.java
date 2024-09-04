@@ -18,6 +18,6 @@ public class Payment implements Serializable {
     private Date date;
     private String cardType;
     private String cardNumber;
-    @ManyToOne
+    @OneToOne(mappedBy = "payment")
     Order order;
 }

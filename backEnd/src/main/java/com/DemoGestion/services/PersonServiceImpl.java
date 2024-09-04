@@ -13,22 +13,22 @@ import java.util.List;
 public class PersonServiceImpl implements PersonService {
 
     //POUR UTILISER PersonRepository
-    private final PersonRepository repository;
+    private final PersonRepository personnRepository;
 
     PersonServiceImpl(final PersonRepository repository){
-        this.repository = repository;
+        this.personnRepository = repository;
     }
 
     //PROVIDER
 
     public void createProvider(Provider provider) {
-        this.repository.save(provider);
+        this.personnRepository.save(provider);
     }
 
     @Override
     public List<Provider> findAllProviders() {
         List<Provider> providers = new ArrayList<>();
-        for(Person p: this.repository.findAll()){
+        for(Person p: this.personnRepository.findAll()){
             if(p instanceof  Provider){
                 providers.add((Provider)p);
             }
@@ -41,7 +41,7 @@ public class PersonServiceImpl implements PersonService {
     @Override
     public List<Client> findAllClients() {
         List<Client> clients = new ArrayList<>();
-        for(Person p: this.repository.findAll()){
+        for(Person p: this.personnRepository.findAll()){
             if(p instanceof  Client){
                 clients.add((Client) p);
             }
@@ -51,7 +51,7 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public void editPerson(Client client, long id) {
-        Person person =  this.repository.getReferenceById(id);  //On récupè re la Person qu'"on souhaite modifer
+        Person person =  this.personnRepository.getReferenceById(id);  //On récupè re la Person qu'"on souhaite modifer
         if(person instanceof Client){
                 person.setTelephone(person.getTelephone());
                 person.setAddress(person.getAddress());
@@ -59,24 +59,39 @@ public class PersonServiceImpl implements PersonService {
                 person.setEmail(person.getEmail());
                 person.setName(person.getName());
         }
-            this.repository.save(person);
+            this.personnRepository.save(person);
     }
 
 
     @Override
     public void createClient(Client client) {
-        this.repository.save(client);
+        this.personnRepository.save(client);
     }
 
     @Override
     public void deletePerson(long id) {
-        //this.repository.delete(repository);
+       this.personnRepository.deleteById(id);
         // A CORRIGER
     }
 
     @Override
+    public Person findOnePerson(long id) {
+        return this.personnRepository.getReferenceById(id);
+    }
+
+    @Override
+    public Client findOneClientById(long id) {
+        return (Client) this.personnRepository.getReferenceById(id);
+    }
+
+    @Override
+    public Provider findOneProviderById(long id) {
+        return (Provider) this.personnRepository.getReferenceById(id);
+    }
+
+    @Override
     public void editPerson(Provider provider, long id) {
-       Person person =  this.repository.getReferenceById(id);  //On récupère la Person qu'"on souhaite modifer
+       Person person =  this.personnRepository.getReferenceById(id);  //On récupère la Person qu'"on souhaite modifer
 
         if(person instanceof Provider){
             person.setAddress(provider.getAddress());
@@ -86,7 +101,7 @@ public class PersonServiceImpl implements PersonService {
             ((Provider) person).setRaisonSociale(provider.getRaisonSociale());
             ((Provider) person).setAccountBank(provider.getAccountBank());
 
-            this.repository.save(person);
+            this.personnRepository.save(person);
         }
     }
 

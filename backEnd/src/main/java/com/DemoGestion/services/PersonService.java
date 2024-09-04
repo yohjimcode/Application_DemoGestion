@@ -29,4 +29,8 @@ public interface PersonService {
     void deletePerson(long id);
 
 
+    Person findOnePerson(long id);
+
+    Client findOneClientById(long id);
+    Provider findOneProviderById(long id);
 }
