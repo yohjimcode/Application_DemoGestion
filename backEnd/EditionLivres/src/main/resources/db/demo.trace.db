@@ -1,0 +1,15 @@
+2024-11-04 00:33:39.648785+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "LIVRE" not found (this database is empty); SQL statement:
+select lm1_0.reference_number,lm1_0.auteur,lm1_0.date_parution,lm1_0.image_livre,lm1_0.prix,lm1_0.recommandation,lm1_0.resume,lm1_0.titre from livre lm1_0 [42104-224]
+2024-11-04 00:34:50.292150+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "LIVRE" not found (this database is empty); SQL statement:
+select lm1_0.reference_number,lm1_0.auteur,lm1_0.date_parution,lm1_0.image_livre,lm1_0.prix,lm1_0.recommandation,lm1_0.resume,lm1_0.titre from livre lm1_0 [42104-224]
+2024-11-04 00:35:52.721413+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "LIVRE" not found (this database is empty); SQL statement:
+insert into livre (auteur,date_parution,image_livre,prix,recommandation,resume,titre,reference_number) values (?,?,?,?,?,?,?,default) [42104-224]
+2024-11-04 00:42:08.116226+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "LIVRE" not found (this database is empty); SQL statement:
+insert into livre (auteur,date_parution,image_livre,prix,recommandation,resume,titre,reference_number) values (?,?,?,?,?,?,?,default) [42104-224]
+2024-11-04 00:42:42.199482+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "LIVRE" not found (this database is empty); SQL statement:
+insert into livre (auteur,date_parution,image_livre,prix,recommandation,resume,titre,reference_number) values (?,?,?,?,?,?,?,default) [42104-224]
